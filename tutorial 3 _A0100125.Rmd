@@ -1,0 +1,96 @@
+---
+title: "Tutorial 3"
+author: "Xia Jingyi"
+date: "February 4, 2016"
+output: html_document
+---
+
+```{r, message=FALSE, echo=FALSE}
+library(ggplot2)
+library(dplyr)
+```
+
+#### 1. Suppose your CEO wants you to derive KPIs for the following 2 variables:
+(i) waiting time
+(ii) service satifaction
+
+#### (a) Using the given dataset, derive for each KPI:
+i. the appropriate statistical index
+ii. the appropriate statistical chart
+
+* KPI for waiting time
+
+```{r, echo=FALSE}
+labs <- read.csv("~/labs.csv")
+qplot(WaitTime, data = labs, geom = "bar")
+```
+
+*Answer: From the histogram above, we can tell the median of waiting time is 70 minutes which can be used as a good statistical index.*
+
+* KPI for service satisfaction
+
+```{r, echo=FALSE}
+qplot(SvcSat, data = labs, geom = "bar")
+```
+
+*Answer: From the histogram above, we can tell the median response of service satisfaction is Yes which can be used as a good statistical index.*
+
+#### (b) Is there any statistical evidence to suggest differences in service satisfaction for age and gender? Comment on your findings.
+
+* Customer satisfaction among __female__ customers of different ages:
+```{r, echo=FALSE}
+Female <-
+  labs %>%
+  filter(Gender=='F')
+s <- ggplot(Female, aes(AGE, fill = SvcSat))
+s + geom_bar(position = "dodge")
+```
+
+* Customer satisfaction among __male__ customers of different ages:
+```{r, echo=FALSE}
+Male <-
+  labs %>%
+  filter(Gender=='M')
+s <- ggplot(Male, aes(AGE, fill = SvcSat))
+s + geom_bar(position = "dodge")
+```
+
+*Answer: From the histograms above, we can tell that among female customers, those of around 35 and above 55 tend to be more dissatisfied with the service.However, for male customers, young adult (around 30 and below) and those above 45 are more dissatisfied with the service.*
+
+#### (c) Is there any statistical evidence to suggest that service satisfaction is correlated with waiting times?
+
+```{r, echo=FALSE}
+s <- ggplot(labs, aes(WaitTime, fill = SvcSat))
+s + geom_bar(position = "dodge")
+```
+
+*Answer: From the histograms above, we can tell that the longer the waiting time, the more dissatisfication happens.*
+
+#### (d) Compute the Body Mass Index for each patient and test whether the "BMIs" are correlated with "Total Cholesterol"
+
+```{r, echo=FALSE}
+newView = mutate(labs, BMI = WT/(HT*HT))
+s <- ggplot(newView, aes(Serial, BMI))
+s + geom_bar(stat = "identity")
+
+qplot(TC, BMI, data=newView)
+```
+
+*Answer: No clear evidence shows that "BMIs" are correlated with "Total Cholesterol".*
+
+#### (e) Predict the "BMI" of a Chinese male patient whose age is 45 and SBP is 135 and TC is 150. What assumptions are necessary for the prediction to be valid?
+
+```{r, echo=FALSE}
+newView = mutate(labs,bmi=WT/(HT*HT))
+c=select(newView,18,2,6,7,12,14)
+c=na.omit(c)
+var1 <- ifelse(c$ETHNIC=="C",1,0)
+var2 <- ifelse(c$Gender=="M",1,0)
+lm(c$bmi~var1+var2+c$AGE+c$SBP+c$TC)
+summary(lm(c$bmi~var1+var2+c$AGE+c$SBP+c$TC))
+```
+
+*Answer: BMI = 10.12256 + (-0.89042) X 1 + 0.62397 X 1 + 0.01976 X 135 + 0.08618 X 150 = 25.45. The assumption is that the relationship between BMI and other several variants is linear.*
+                
+
+
