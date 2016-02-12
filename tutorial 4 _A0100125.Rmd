@@ -1,0 +1,36 @@
+---
+title: "Tutorial 4"
+author: "Xia Jingyi"
+date: "February 12, 2016"
+output: md_document
+---
+
+```{r, message=FALSE, echo=FALSE}
+library(ggplot2)
+library(dplyr)
+```
+
+Diabetic Control  | Diabetic Complication present  | Diabetic Complication asent
+-------------     | -------------                  | ------------- 
+Good              | 3                              | 7
+Poor              | 4                              | 2
+
+#### (a) Is there any difference in complication rates between patients with good diabetic control and those with pool control?
+
+* Complication rate of patients with good diabetic control: 3 / (3+7) = 30%
+* Complication rate of patients with poor diabetic control: 4 / (4+2) = 66.7%
+
+
+#### (b) Determine whether the difference between the two rates is statistically different?
+```{r, message=FALSE, echo=FALSE}
+diabetic.df = matrix(c(3,4,7,2), nrow = 2)
+fisher.test(diabetic.df)
+```
+
+*The p-value calculated for the test does not provide any evidence against the assumption of independence. In this example this means that we cannot confidently claim any difference in performance for the two rates*
+
+
+#### (c) Explain why the x^2 test should not be used for this study.
+
+*Chi-square test is suitable for unpaired data from large samples. In this case, the sample size is only 16 and relatively small.*
+
