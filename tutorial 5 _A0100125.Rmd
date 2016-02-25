@@ -1,0 +1,33 @@
+---
+title: "tutorial 5 _A0100125H"
+author: "jy"
+date: "February 25, 2016"
+output: md_document
+---
+
+```{r, message=FALSE, echo=FALSE}
+library(Rcmdr)
+library(car)
+library(RcmdrMisc)
+library(foreign, pos=15)
+country <- read.spss("C:/Users/ASUS/Documents/country122.sav", 
+  use.value.labels=TRUE, max.value.labels=Inf, to.data.frame=TRUE)
+colnames(country) <- tolower(colnames(country))
+RegModel <- lm(lifeexpf~birthrat, data=country)
+summary(RegModel)
+```
+
+* As p-value: < 2.2e-16 (less than 0.05) is small, we cannot reject null hypothesis. Thus, there is a linear relationship between the two variables.
+
+* R-square is 0.756 close to 1, showing a relatively strong linear relationship between the two variables.
+
+```{r, echo=FALSE}
+scatterplot(lifeexpf~birthrat, reg.line=lm, smooth=FALSE, spread=FALSE, 
+  boxplots=FALSE, span=0.5, ellipse=FALSE, levels=c(.5, .9), jitter=list(x=1),
+   data=country)
+```
+
+* The two variables are negatively corelated (as seen from the graph - downward slope). The higher the birth rate, the lower the life expectancy.
+
+* Simple linear equation: lifeexpf = 89.58892 - 0.74471 * birthrat;
+  lifeexpf = 89.58892 - 0.74471 * 25 = 70.97117
