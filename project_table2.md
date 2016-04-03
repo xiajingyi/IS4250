@@ -202,42 +202,4 @@
     ## BMI2Overweight                 1.0317312 0.9332270 1.1406326
     ## MENTALHEALTH2Abnormal          1.3816167 1.2817718 1.4892392
 
-    ## [1] TRUE
-
-    ## Call:
-    ## polr(formula = Score ~ Occupation, data = Male, weights = N, 
-    ##     method = "logistic")
-    ## 
-    ## Coefficients:
-    ##                      Value Std. Error t value
-    ## Occupation2Moderate -1.425     0.1280 -11.133
-    ## Occupation3Small    -1.089     0.1219  -8.933
-    ## 
-    ## Intercepts:
-    ##                              Value    Std. Error t value 
-    ## Healthy|Relatively Healthy    -1.3372   0.1117   -11.9669
-    ## Relatively Healthy|Unhealthy   0.9681   0.1089     8.8903
-    ## 
-    ## Residual Deviance: 4365.54 
-    ## AIC: 4373.54
-
-    ##                         2.5 %    97.5 %
-    ## Occupation2Moderate 0.1868933 0.3087360
-    ## Occupation3Small    0.2648106 0.4270955
-
-    ##                                   Value Std. Error    t value      p value
-    ## Occupation2Moderate          -1.4252998  0.1280223 -11.133219 8.645606e-29
-    ## Occupation3Small             -1.0889654  0.1219090  -8.932610 4.160757e-19
-    ## Healthy|Relatively Healthy   -1.3371541  0.1117380 -11.966873 5.298833e-33
-    ## Relatively Healthy|Unhealthy  0.9681238  0.1088968   8.890284 6.095274e-19
-
-    ##                         2.5 %     97.5 %
-    ## Occupation2Moderate -1.676219 -1.1743808
-    ## Occupation3Small    -1.327903 -0.8500282
-
-    ## Occupation2Moderate    Occupation3Small 
-    ##           0.2404364           0.3365645
-
-    ##                           COR     2.5 %    97.5 %
-    ## Occupation2Moderate 0.2404364 0.1868933 0.3087360
-    ## Occupation3Small    0.3365645 0.2648106 0.4270955
+![](project_table2_files/figure-markdown_strict/unnamed-chunk-3-1.png)<!-- -->![](project_table2_files/figure-markdown_strict/unnamed-chunk-3-2.png)<!-- -->![](project_table2_files/figure-markdown_strict/unnamed-chunk-3-3.png)<!-- -->![](project_table2_files/figure-markdown_strict/unnamed-chunk-3-4.png)<!-- -->![](project_table2_files/figure-markdown_strict/unnamed-chunk-3-5.png)<!-- -->![](project_table2_files/figure-markdown_strict/unnamed-chunk-3-6.png)<!-- -->
