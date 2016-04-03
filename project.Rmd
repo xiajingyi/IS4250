@@ -22,8 +22,6 @@ Age
 
 chisq.test(Age,correct=F)
 
-plot(effect("Age:Gender", health), style = 'stacked')
-
 ```
 
 ```{r,  message=FALSE, echo=FALSE}
