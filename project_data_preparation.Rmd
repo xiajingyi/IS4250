@@ -2,7 +2,7 @@
 title: "code_data_preparation"
 author: "jy"
 date: "April 5, 2016"
-output: md_document
+output: html_document
 ---
 #### import data
 
@@ -15,6 +15,8 @@ library(mlogit)
 library(nnet)
 library(dplyr)
 library(data.table)
+library(ggplot2)
+library(lattice)
 ```
 
 
@@ -293,6 +295,21 @@ LifestyleScoreX
 
 chisq.test(LifestyleScoreX,correct=F)
 
+
+healthDataTbl$ScoreX <- factor(healthDataTbl$ScoreX,levels=c(1,2,3),
+  	labels=c("Healthy", "Relatively Healthy", "Unhealthy")) 
+healthDataTbl$GenderX <- factor(healthDataTbl$GenderX,levels=c(1,2),
+  	labels=c("Male","Female")) 
+
+qplot(GenderX, ScoreX, data=healthDataTbl, geom=c("jitter"), 
+   fill=GenderX, main="Lifestyle Score - Gender",
+   xlab="", ylab="Lifestyle Score", color = 'red')
+
+
+densityplot(~healthDataTbl$Score|healthDataTbl$GenderX, 
+  	main="Lifestyle Score - Gender",
+   xlab="Lifestyle Score")
+
 ```
 
 #### Discuss the Association between lifestyle Score and socio-demographic characteristics and phiscal and mental status (By Gender)
@@ -331,6 +348,8 @@ plot(effect("MENTALHEALTH1", test1))
 
 pairs(~AGE1 + OCCUPATION1 + WORKPLACESCALE1 + EDUCATIONATTAINMENT1 + MARITALSTATUS1  + ACCOMPANYCHILD1 + SALARY1 + NUMBEROFCITIESRESIDEDIN1 + DAILYWORKINGHOURS1 + WEEKLYWORKINGDAYS1 + RESIDENCE1 + BMI1 + MENTALHEALTH1,data=Male, 
    main="Simple Scatterplot Matrix")
+
+
 ```
 
 
