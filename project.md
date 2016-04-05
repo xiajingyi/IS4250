@@ -23,6 +23,8 @@
     ## data:  Age
     ## X-squared = 41.241, df = 1, p-value = 1.346e-10
 
+![](project_files/figure-markdown_strict/unnamed-chunk-2-1.png)<!-- -->
+
     ##                     Gender
     ## Occupation           Male Female
     ##   Manufacturing      1406   1107

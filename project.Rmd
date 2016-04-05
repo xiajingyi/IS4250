@@ -11,6 +11,7 @@ library(vcd)
 library(car)
 library(mlogit)
 library(nnet)
+library(visualize)
 ```
 
 ```{r,  message=FALSE, echo=FALSE}
@@ -23,6 +24,8 @@ Age
 chisq.test(Age,correct=F)
 
 ```
+plot(Age)
+visualize.chisq(stat = 50, df = 1, section = "lower")
 
 ```{r,  message=FALSE, echo=FALSE}
 Occupation <- table(health$Occupation, health$Gender)
@@ -116,6 +119,26 @@ dimnames(TypeOfResidence) <- list(TypeOfResidence = c("Collective dormitory", "R
 TypeOfResidence
 
 chisq.test(TypeOfResidence,correct=F)
+
+```
+
+```{r,  message=FALSE, echo=FALSE}
+BMI <- table(health$BMICat, health$Gender)
+dimnames(BMI) <- list(BMICat = c("Under Weight", "Normal", "Overweight/Obesity"), Gender = c("Male","Female"))
+
+BMI
+
+chisq.test(BMI,correct=F)
+
+```
+
+```{r,  message=FALSE, echo=FALSE}
+MentalHealth <- table(health$MentalHealthCat, health$Gender)
+dimnames(MentalHealth) <- list(MentalHealthCat = c("Normal", "Abnormal"), Gender = c("Male","Female"))
+
+MentalHealth
+
+chisq.test(MentalHealth,correct=F)
 
 ```
 
