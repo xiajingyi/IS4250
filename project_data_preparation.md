@@ -16,6 +16,8 @@
 
     ## Warning: package 'data.table' was built under R version 3.2.4
 
+    ## Warning: package 'lattice' was built under R version 3.2.4
+
 #### Rename data as codebook provided (some discrepency and several missing attributes regarding physical health status)
 
 #### Prepare data for statistical analysis
@@ -276,6 +278,8 @@
     ## data:  LifestyleScoreX
     ## X-squared = 513.27, df = 2, p-value < 2.2e-16
 
+![](project_data_preparation_files/figure-markdown_strict/unnamed-chunk-23-1.png)<!-- -->![](project_data_preparation_files/figure-markdown_strict/unnamed-chunk-23-2.png)<!-- -->
+
 #### Discuss the Association between lifestyle Score and socio-demographic characteristics and phiscal and mental status (By Gender)
 
 #### 1. For Male rural-to-urban migrants
@@ -374,7 +378,7 @@
     ## BMI1Overweight                 0.9360028 0.8194939 1.069076
     ## MENTALHEALTH1Abnormal          1.4310271 1.3232573 1.547574
 
-![](project_data_preparation_files/figure-markdown_strict/unnamed-chunk-24-1.png)<!-- -->![](project_data_preparation_files/figure-markdown_strict/unnamed-chunk-24-2.png)<!-- -->![](project_data_preparation_files/figure-markdown_strict/unnamed-chunk-24-3.png)<!-- -->![](project_data_preparation_files/figure-markdown_strict/unnamed-chunk-24-4.png)<!-- -->![](project_data_preparation_files/figure-markdown_strict/unnamed-chunk-24-5.png)<!-- -->
+![](project_data_preparation_files/figure-markdown_strict/unnamed-chunk-24-1.png)<!-- -->![](project_data_preparation_files/figure-markdown_strict/unnamed-chunk-24-2.png)<!-- -->![](project_data_preparation_files/figure-markdown_strict/unnamed-chunk-24-3.png)<!-- -->![](project_data_preparation_files/figure-markdown_strict/unnamed-chunk-24-4.png)<!-- -->
 
 #### 2. For Female rural-to-urban migrants
 
