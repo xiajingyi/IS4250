@@ -1,4 +1,4 @@
-#### import data
+##### Import library
 
     ## Warning: package 'MASS' was built under R version 3.2.4
 
@@ -18,11 +18,87 @@
 
     ## Warning: package 'lattice' was built under R version 3.2.4
 
-#### Rename data as codebook provided (some discrepency and several missing attributes regarding physical health status)
+##### Convert excel data file into .csv format. Read all data from csv file in R.
 
-#### Prepare data for statistical analysis
+##### Rename 24 data attributes according to codebook provided.
 
-#### Chi-square Test for Socio-demographic characteristics of Rural-to-Urban Migrants by Gender
+##### (Detected some discrepency and several missing attributes such as self-reported health status)
+
+##### Compute Mental Health Score:
+
+-   Read self-assessment scores of q201-q290, 90 questions from Symptom
+    Checklist-90-Revised.
+-   Each question carries 1-5 marks, representing none, mild, moderate,
+    severe, extreme.
+-   Sum up 90 scores
+
+##### Compute Drinking Behaviour Score
+
+-   3 question
+-   Frequency of drinking
+-   How many drinks containing alcohol do you have on a typical day when
+    you are drinking?
+-   How often do you have six or more drinks on one occasion?
+-   Each question carries 1-5 marks, representing degree of alcohol
+    consumption
+-   Sum up 3 scores
+
+##### Further process data (mainly Categorization)
+
+-   Education Attainment
+-   4 catrgories: Elementary or lower, Junior high school, High school,
+    College or above
+-   Gender
+-   swap sequence into 2 categories: Male, Female
+-   Number of Accompanying Children
+-   3 categories: No children, Cohabitating children, Children residing
+    elsewhere
+-   Salary
+-   4 categories: \<1500RMB, 1500-2500RMB, 2500-3500RMB, \>=3500RMB
+-   Number of Cities Resided in
+-   2 categories: 1-2, \>=3
+-   Daily Working Hours
+-   Weekly Working Days
+-   BMI:
+-   BMI = weight(kg) / (height(m)^2)
+-   3 categories: \< 18.5; \>= 18.5 and \< 24; \>=24
+-   Mental Health
+-   2 categories: if MentalHealth score \<= 160, Normal; if MentalHealth
+    score \> 160, Abnormal
+-   Smoking
+-   Current Smoker
+-   2 categories: Unhealthy, Healthy
+-   if smoked in the past 30 days, Unhealthy; else Healthy
+-   Drinking
+-   Hazardous Alcohol Consumption
+-   2 categories: Unhealthy, Healthy
+-   if Alcohol Consumption Score \>=4 for Male or Alcohol Consumption
+    Score \>=3 for Female, Unhealthy; else Healthy
+-   Daily Sleeping Hours
+-   2 categories: Unhealthy, Healthy
+-   if Daily Sleeping Hours 7-9 hours/night, Health; else Unhealthy
+-   Sleeping Quality
+-   Daily Breakfasts
+-   2 categories: Unhealthy, Healthy
+-   if almost Daily Breakfasts, Health; else Unhealthy
+-   Daily Fruits and Vegetables Consumption
+-   2 categories: Unhealthy, Healthy
+-   if almost Daily Fruits and Vegetables Consumption, Health; else
+    Unhealthy
+-   Daily Regular Meals
+-   2 categories: Unhealthy, Healthy
+-   if almost Daily Regular Meals, Health; else Unhealthy
+
+##### Compute Lifestyle Behaviour Score
+
+-   6 factors: CurrentSmoker, HazardousDrink, DailySleepingHours,
+    DailyBreakfast, DailyFruitsVegetables, DailyRegularMeals
+-   1 score for every Unhealthy Behavior
+-   Sum: 0, Healthy; 1-2 Relatively Healthy; 3-6 Unhealthy
+
+##### Till here, end of Section 0 - Data Preparation
+
+##### Section 1 - Chi-square Test for Socio-demographic characteristics of Rural-to-Urban Migrants by Gender
 
     ##       GenderX
     ## AgeX   Male Female
@@ -164,7 +240,7 @@
     ## data:  TypeOfResidence
     ## X-squared = 299.26, df = 4, p-value < 2.2e-16
 
-#### Chi-square Test for Physical and Mental Status and Lifestyle Behaviours of Rural-to-Urban Migrants by Gender
+##### Section 2 - Chi-square Test for Physical and Mental Status and Lifestyle Behaviours of Rural-to-Urban Migrants by Gender
 
     ##                     GenderX
     ## BMIX                 Male Female
@@ -278,11 +354,11 @@
     ## data:  LifestyleScoreX
     ## X-squared = 513.27, df = 2, p-value < 2.2e-16
 
-![](project_code_files/figure-markdown_strict/unnamed-chunk-23-1.png)<!-- -->![](project_code_files/figure-markdown_strict/unnamed-chunk-23-2.png)<!-- -->![](project_code_files/figure-markdown_strict/unnamed-chunk-23-3.png)<!-- -->
+![](project_code_files/figure-markdown_strict/unnamed-chunk-28-1.png)<!-- -->![](project_code_files/figure-markdown_strict/unnamed-chunk-28-2.png)<!-- -->
 
-#### Discuss the Association between lifestyle Score and socio-demographic characteristics and phiscal and mental status (By Gender)
+##### Section 3 - Association between lifestyle Score and socio-demographic characteristics and phiscal and mental status (By Gender)
 
-#### 1. For Male rural-to-urban migrants
+3.1 For Male rural-to-urban migrants
 
     ## 
     ## Call:
@@ -378,17 +454,17 @@
     ## BMI1Overweight                 0.9360028 0.8194939 1.069076
     ## MENTALHEALTH1Abnormal          1.4310271 1.3232573 1.547574
 
-#### Male - significant risk factor COR visualization
+###### Male - significant risk factor COR visualization
 
-![](project_code_files/figure-markdown_strict/unnamed-chunk-25-1.png)<!-- -->
+![](project_code_files/figure-markdown_strict/unnamed-chunk-30-1.png)<!-- -->
 
-![](project_code_files/figure-markdown_strict/unnamed-chunk-26-1.png)<!-- -->
+![](project_code_files/figure-markdown_strict/unnamed-chunk-31-1.png)<!-- -->
 
-![](project_code_files/figure-markdown_strict/unnamed-chunk-27-1.png)<!-- -->
+![](project_code_files/figure-markdown_strict/unnamed-chunk-32-1.png)<!-- -->
 
-![](project_code_files/figure-markdown_strict/unnamed-chunk-28-1.png)<!-- -->
+![](project_code_files/figure-markdown_strict/unnamed-chunk-33-1.png)<!-- -->
 
-#### 2. For Female rural-to-urban migrants
+3.2 For Female rural-to-urban migrants
 
     ## 
     ## Call:
@@ -484,16 +560,16 @@
     ## BMI2Overweight                 1.0335682 0.9356281 1.1417604
     ## MENTALHEALTH2Abnormal          1.3779398 1.2785766 1.4850249
 
-#### Female - significant risk factor COR visualization
-
-![](project_code_files/figure-markdown_strict/unnamed-chunk-30-1.png)<!-- -->
-
-![](project_code_files/figure-markdown_strict/unnamed-chunk-31-1.png)<!-- -->
-
-![](project_code_files/figure-markdown_strict/unnamed-chunk-32-1.png)<!-- -->
-
-![](project_code_files/figure-markdown_strict/unnamed-chunk-33-1.png)<!-- -->
-
-![](project_code_files/figure-markdown_strict/unnamed-chunk-34-1.png)<!-- -->
+###### Female - significant risk factor COR visualization
 
 ![](project_code_files/figure-markdown_strict/unnamed-chunk-35-1.png)<!-- -->
+
+![](project_code_files/figure-markdown_strict/unnamed-chunk-36-1.png)<!-- -->
+
+![](project_code_files/figure-markdown_strict/unnamed-chunk-37-1.png)<!-- -->
+
+![](project_code_files/figure-markdown_strict/unnamed-chunk-38-1.png)<!-- -->
+
+![](project_code_files/figure-markdown_strict/unnamed-chunk-39-1.png)<!-- -->
+
+![](project_code_files/figure-markdown_strict/unnamed-chunk-40-1.png)<!-- -->
