@@ -278,7 +278,7 @@
     ## data:  LifestyleScoreX
     ## X-squared = 513.27, df = 2, p-value < 2.2e-16
 
-![](project_data_preparation_files/figure-markdown_strict/unnamed-chunk-23-1.png)<!-- -->![](project_data_preparation_files/figure-markdown_strict/unnamed-chunk-23-2.png)<!-- -->
+![](project_code_files/figure-markdown_strict/unnamed-chunk-23-1.png)<!-- -->![](project_code_files/figure-markdown_strict/unnamed-chunk-23-2.png)<!-- -->
 
 #### Discuss the Association between lifestyle Score and socio-demographic characteristics and phiscal and mental status (By Gender)
 
@@ -378,7 +378,7 @@
     ## BMI1Overweight                 0.9360028 0.8194939 1.069076
     ## MENTALHEALTH1Abnormal          1.4310271 1.3232573 1.547574
 
-![](project_data_preparation_files/figure-markdown_strict/unnamed-chunk-24-1.png)<!-- -->![](project_data_preparation_files/figure-markdown_strict/unnamed-chunk-24-2.png)<!-- -->![](project_data_preparation_files/figure-markdown_strict/unnamed-chunk-24-3.png)<!-- -->![](project_data_preparation_files/figure-markdown_strict/unnamed-chunk-24-4.png)<!-- -->
+![](project_code_files/figure-markdown_strict/unnamed-chunk-24-1.png)<!-- -->![](project_code_files/figure-markdown_strict/unnamed-chunk-24-2.png)<!-- -->![](project_code_files/figure-markdown_strict/unnamed-chunk-24-3.png)<!-- -->![](project_code_files/figure-markdown_strict/unnamed-chunk-24-4.png)<!-- -->
 
 #### 2. For Female rural-to-urban migrants
 
@@ -476,4 +476,4 @@
     ## BMI2Overweight                 1.0335682 0.9356281 1.1417604
     ## MENTALHEALTH2Abnormal          1.3779398 1.2785766 1.4850249
 
-![](project_data_preparation_files/figure-markdown_strict/unnamed-chunk-25-1.png)<!-- -->![](project_data_preparation_files/figure-markdown_strict/unnamed-chunk-25-2.png)<!-- -->![](project_data_preparation_files/figure-markdown_strict/unnamed-chunk-25-3.png)<!-- -->![](project_data_preparation_files/figure-markdown_strict/unnamed-chunk-25-4.png)<!-- -->![](project_data_preparation_files/figure-markdown_strict/unnamed-chunk-25-5.png)<!-- -->![](project_data_preparation_files/figure-markdown_strict/unnamed-chunk-25-6.png)<!-- -->
+![](project_code_files/figure-markdown_strict/unnamed-chunk-25-1.png)<!-- -->![](project_code_files/figure-markdown_strict/unnamed-chunk-25-2.png)<!-- -->![](project_code_files/figure-markdown_strict/unnamed-chunk-25-3.png)<!-- -->![](project_code_files/figure-markdown_strict/unnamed-chunk-25-4.png)<!-- -->![](project_code_files/figure-markdown_strict/unnamed-chunk-25-5.png)<!-- -->![](project_code_files/figure-markdown_strict/unnamed-chunk-25-6.png)<!-- -->
