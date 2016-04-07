@@ -348,6 +348,40 @@ plot(effect("MENTALHEALTH1", test1))
 
 ```
 
+#### Male - significant risk factor COR visualization
+
+```{r,  message=FALSE, echo=FALSE}
+COR = c(1.0, 1.0651334, 1.1669024, 0.9563699, 1.0786757, 1.3927085)
+Occupation = c("1Manufacturing", "2Construction", "3Hospitality", "4DomesticServices", "5SmallBusiness", "6Recreation/Leisures")
+COROccupation = data.frame(COR,Occupation)
+ggplot(COROccupation, aes(x = Occupation, y = COR, fill = Occupation)) + geom_bar(stat = "identity", width = 0.8)
+```
+
+
+```{r,  message=FALSE, echo=FALSE}
+COR = c(1.0, 0.9919265, 1.1223432)
+WorkplaceScale = c("1Large","2Moderate","3Small")
+CORWorkplaceScale = data.frame(COR,WorkplaceScale)
+ggplot(CORWorkplaceScale, aes(x = WorkplaceScale, y = COR, fill = WorkplaceScale)) + geom_bar(stat = "identity")
+```
+
+
+```{r,  message=FALSE, echo=FALSE}
+COR = c(0.9747957, 1.0, 1.0039951, 1.1209372)
+DailyWorkingHours = c("1.<8hr","2.=8hr","3.8-11hr","4.>=11hr")
+CORDailyWorkingHours = data.frame(COR,DailyWorkingHours)
+ggplot(CORDailyWorkingHours, aes(x = DailyWorkingHours, y = COR, fill = DailyWorkingHours)) + geom_bar(stat = "identity")
+```
+
+
+```{r,  message=FALSE, echo=FALSE}
+COR = c(1.0, 1.4310271)
+MentalHealth = c("1Normal", "2Abnormal")
+CORMentalHealth = data.frame(COR,MentalHealth)
+ggplot(CORMentalHealth, aes(x = MentalHealth, y = COR, fill = MentalHealth)) + geom_bar(stat = "identity")
+```
+
+
 
 #### 2. For Female rural-to-urban migrants
 
@@ -382,5 +416,56 @@ plot(effect("SALARY2", test2))
 plot(effect("NUMBEROFCITIESRESIDEDIN2", test2))
 plot(effect("DAILYWORKINGHOURS2", test2))
 plot(effect("MENTALHEALTH2", test2))
+```
+
+
+#### Female - significant risk factor COR visualization
+
+
+```{r,  message=FALSE, echo=FALSE}
+COR = c(1.0, 0.9787387 , 1.1584592 , 1.1146430 , 1.1034555 , 1.6781331 )
+Occupation = c("1Manufacturing", "2Construction", "3Hospitality", "4DomesticServices", "5SmallBusiness", "6Recreation/Leisures")
+COROccupation = data.frame(COR,Occupation)
+ggplot(COROccupation, aes(x = Occupation, y = COR, fill = Occupation)) + geom_bar(stat = "identity", width = 0.8)
+```
+
+
+```{r,  message=FALSE, echo=FALSE}
+COR = c(1.0, 1.2135993 , 1.1061900 , 1.1118359 )
+MaritalStatus = c("1Married", "2Single","3Cohabitating","4Divorced/Widowed")
+CORMaritalStatus = data.frame(COR,MaritalStatus)
+ggplot(CORMaritalStatus, aes(x = MaritalStatus, y = COR, fill = MaritalStatus)) + geom_bar(stat = "identity")
+```
+
+
+```{r,  message=FALSE, echo=FALSE}
+COR = c(1.0, 0.9193689 , 0.9299730 , 1.1547884 )
+Salary = c("1.<1500RMB","2.1500-2500RMB","3.2500-3500RMB","4.>=3500RMB")
+CORSalary = data.frame(COR,Salary)
+ggplot(CORSalary, aes(x = Salary, y = COR, fill = Salary)) + geom_bar(stat = "identity")
+```
+
+
+```{r,  message=FALSE, echo=FALSE}
+COR = c(1.0, 1.0890634 )
+NumberOfCitiesResidedIn = c("1. 1-2 cities", "2. >=3 cities")
+CORNumberOfCitiesResidedIn = data.frame(COR,NumberOfCitiesResidedIn)
+ggplot(CORNumberOfCitiesResidedIn, aes(x = NumberOfCitiesResidedIn, y = COR, fill = NumberOfCitiesResidedIn)) + geom_bar(stat = "identity")
+```
+
+
+```{r,  message=FALSE, echo=FALSE}
+COR = c(1.0464129 , 1.0, 1.0785105 , 1.0507422 )
+DailyWorkingHours = c("1.<8hr","2.=8hr","3.8-11hr","4.>=11hr")
+CORDailyWorkingHours = data.frame(COR,DailyWorkingHours)
+ggplot(CORDailyWorkingHours, aes(x = DailyWorkingHours, y = COR, fill = DailyWorkingHours)) + geom_bar(stat = "identity")
+```
+
+
+```{r,  message=FALSE, echo=FALSE}
+COR = c(1.0, 1.3779398 )
+MentalHealth = c("1Normal", "2Abnormal")
+CORMentalHealth = data.frame(COR,MentalHealth)
+ggplot(CORMentalHealth, aes(x = MentalHealth, y = COR, fill = MentalHealth)) + geom_bar(stat = "identity")
 ```
 

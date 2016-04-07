@@ -380,6 +380,16 @@
 
 ![](project_code_files/figure-markdown_strict/unnamed-chunk-24-1.png)<!-- -->![](project_code_files/figure-markdown_strict/unnamed-chunk-24-2.png)<!-- -->![](project_code_files/figure-markdown_strict/unnamed-chunk-24-3.png)<!-- -->![](project_code_files/figure-markdown_strict/unnamed-chunk-24-4.png)<!-- -->
 
+#### Male - significant risk factor COR visualization
+
+![](project_code_files/figure-markdown_strict/unnamed-chunk-25-1.png)<!-- -->
+
+![](project_code_files/figure-markdown_strict/unnamed-chunk-26-1.png)<!-- -->
+
+![](project_code_files/figure-markdown_strict/unnamed-chunk-27-1.png)<!-- -->
+
+![](project_code_files/figure-markdown_strict/unnamed-chunk-28-1.png)<!-- -->
+
 #### 2. For Female rural-to-urban migrants
 
     ## 
@@ -476,4 +486,18 @@
     ## BMI2Overweight                 1.0335682 0.9356281 1.1417604
     ## MENTALHEALTH2Abnormal          1.3779398 1.2785766 1.4850249
 
-![](project_code_files/figure-markdown_strict/unnamed-chunk-25-1.png)<!-- -->![](project_code_files/figure-markdown_strict/unnamed-chunk-25-2.png)<!-- -->![](project_code_files/figure-markdown_strict/unnamed-chunk-25-3.png)<!-- -->![](project_code_files/figure-markdown_strict/unnamed-chunk-25-4.png)<!-- -->![](project_code_files/figure-markdown_strict/unnamed-chunk-25-5.png)<!-- -->![](project_code_files/figure-markdown_strict/unnamed-chunk-25-6.png)<!-- -->
+![](project_code_files/figure-markdown_strict/unnamed-chunk-29-1.png)<!-- -->![](project_code_files/figure-markdown_strict/unnamed-chunk-29-2.png)<!-- -->![](project_code_files/figure-markdown_strict/unnamed-chunk-29-3.png)<!-- -->![](project_code_files/figure-markdown_strict/unnamed-chunk-29-4.png)<!-- -->![](project_code_files/figure-markdown_strict/unnamed-chunk-29-5.png)<!-- -->![](project_code_files/figure-markdown_strict/unnamed-chunk-29-6.png)<!-- -->
+
+#### Female - significant risk factor COR visualization
+
+![](project_code_files/figure-markdown_strict/unnamed-chunk-30-1.png)<!-- -->
+
+![](project_code_files/figure-markdown_strict/unnamed-chunk-31-1.png)<!-- -->
+
+![](project_code_files/figure-markdown_strict/unnamed-chunk-32-1.png)<!-- -->
+
+![](project_code_files/figure-markdown_strict/unnamed-chunk-33-1.png)<!-- -->
+
+![](project_code_files/figure-markdown_strict/unnamed-chunk-34-1.png)<!-- -->
+
+![](project_code_files/figure-markdown_strict/unnamed-chunk-35-1.png)<!-- -->
