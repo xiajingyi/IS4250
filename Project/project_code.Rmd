@@ -305,7 +305,7 @@ qplot(GenderX, ScoreX, data=healthDataTbl, geom=c("jitter"),
    fill=GenderX, main="Lifestyle Score - Gender",
    xlab="", ylab="Lifestyle Score", color = 'red')
 
-qplot(GenderX, data=healthDataTbl, geom="bar", fill=ScoreX, xlab="", ylab="Lifestyle Score")
+qplot(GenderX, data=healthDataTbl, geom="bar", fill=ScoreX, xlab="", ylab="Lifestyle Score", main="Lifestyle Score - Gender")
 
 densityplot(~healthDataTbl$Score|healthDataTbl$GenderX, 
   	main="Lifestyle Score - Gender",
