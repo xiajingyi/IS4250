@@ -78,6 +78,7 @@
 -   2 categories: Unhealthy, Healthy
 -   if Daily Sleeping Hours 7-9 hours/night, Health; else Unhealthy
 -   Sleeping Quality
+-   2 categories: 1-2 Good/Fair; 3-4 Poor/Very Poor
 -   Daily Breakfasts
 -   2 categories: Unhealthy, Healthy
 -   if almost Daily Breakfasts, Health; else Unhealthy
@@ -358,7 +359,7 @@
 
 ##### Section 3 - Association between lifestyle Score and socio-demographic characteristics and phiscal and mental status (By Gender)
 
-3.1 For Male rural-to-urban migrants
+    3.1 For Male rural-to-urban migrants
 
     ## 
     ## Call:
@@ -464,7 +465,7 @@
 
 ![](project_code_files/figure-markdown_strict/unnamed-chunk-33-1.png)<!-- -->
 
-3.2 For Female rural-to-urban migrants
+    3.2 For Female rural-to-urban migrants
 
     ## 
     ## Call:

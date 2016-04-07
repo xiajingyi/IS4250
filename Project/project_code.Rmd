@@ -70,9 +70,9 @@ healthData <- dplyr::bind_cols(healthData, mentalChecklist)
 
 ##### Compute Drinking Behaviour Score
 * 3 question 
-+ Frequency of drinking 
-+ How many drinks containing alcohol do you have on a typical day when you are drinking?
-+ How often do you have six or more drinks on one occasion?
+  + Frequency of drinking 
+  + How many drinks containing alcohol do you have on a typical day when you are drinking?
+  + How often do you have six or more drinks on one occasion?
 * Each question carries 1-5 marks, representing degree of alcohol consumption
 * Sum up 3 scores
 
@@ -84,43 +84,44 @@ healthData <- dplyr::bind_cols(healthData, drinkingStatus)
 
 ##### Further process data (mainly Categorization)
 * Education Attainment
-+ 4 catrgories: Elementary or lower, Junior high school, High school, College or above
+  + 4 catrgories: Elementary or lower, Junior high school, High school, College or above
 * Gender
-+ swap sequence into 2 categories: Male, Female
+  + swap sequence into 2 categories: Male, Female
 * Number of Accompanying Children
-+ 3 categories: No children, Cohabitating children, Children residing elsewhere
+  + 3 categories: No children, Cohabitating children, Children residing elsewhere
 * Salary
-+ 4 categories: <1500RMB, 1500-2500RMB, 2500-3500RMB, >=3500RMB
+  + 4 categories: <1500RMB, 1500-2500RMB, 2500-3500RMB, >=3500RMB
 * Number of Cities Resided in
-+ 2 categories: 1-2, >=3
+  + 2 categories: 1-2, >=3
 * Daily Working Hours
 * Weekly Working Days
 * BMI:
-+ BMI = weight(kg) / (height(m)^2)
-+ 3 categories: < 18.5; >= 18.5 and < 24; >=24
+  + BMI = weight(kg) / (height(m)^2)
+  + 3 categories: < 18.5; >= 18.5 and < 24; >=24
 * Mental Health
-+ 2 categories: if MentalHealth score <= 160, Normal; if MentalHealth score > 160, Abnormal
+  + 2 categories: if MentalHealth score <= 160, Normal; if MentalHealth score > 160, Abnormal
 * Smoking 
-+ Current Smoker
-+ 2 categories: Unhealthy, Healthy
-+ if smoked in the past 30 days, Unhealthy; else Healthy
+  + Current Smoker
+  + 2 categories: Unhealthy, Healthy
+  + if smoked in the past 30 days, Unhealthy; else Healthy
 * Drinking 
-+ Hazardous Alcohol Consumption
-+ 2 categories: Unhealthy, Healthy
-+ if Alcohol Consumption Score >=4 for Male or Alcohol Consumption Score >=3 for Female, Unhealthy; else Healthy
+  + Hazardous Alcohol Consumption
+  + 2 categories: Unhealthy, Healthy
+  + if Alcohol Consumption Score >=4 for Male or Alcohol Consumption Score >=3 for Female, Unhealthy; else Healthy
 * Daily Sleeping Hours
-+ 2 categories: Unhealthy, Healthy
-+ if Daily Sleeping Hours 7-9 hours/night, Health; else Unhealthy
+  + 2 categories: Unhealthy, Healthy
+  + if Daily Sleeping Hours 7-9 hours/night, Health; else Unhealthy
 * Sleeping Quality
+  + 2 categories: 1-2 Good/Fair; 3-4 Poor/Very Poor
 * Daily Breakfasts
-+ 2 categories: Unhealthy, Healthy
-+ if almost Daily Breakfasts, Health; else Unhealthy
+  + 2 categories: Unhealthy, Healthy
+  + if almost Daily Breakfasts, Health; else Unhealthy
 * Daily Fruits and Vegetables Consumption
-+ 2 categories: Unhealthy, Healthy
-+ if almost Daily Fruits and Vegetables Consumption, Health; else Unhealthy
+  + 2 categories: Unhealthy, Healthy
+  + if almost Daily Fruits and Vegetables Consumption, Health; else Unhealthy
 * Daily Regular Meals
-+ 2 categories: Unhealthy, Healthy
-+ if almost Daily Regular Meals, Health; else Unhealthy
+  + 2 categories: Unhealthy, Healthy
+  + if almost Daily Regular Meals, Health; else Unhealthy
 
 ```{r,  message=FALSE, echo=FALSE}
 healthData <- dplyr::mutate(healthData, EducationAttainmentX = ifelse(EducationAttainment == 1, 1, ifelse(EducationAttainment == 2, 2, ifelse(EducationAttainment == 3, 3, 4))))
@@ -380,7 +381,7 @@ qplot(GenderX, data=healthDataTbl, geom="bar", fill=ScoreX, xlab="", ylab="Lifes
 
 ##### Section 3 - Association between lifestyle Score and socio-demographic characteristics and phiscal and mental status (By Gender)
 
-3.1 For Male rural-to-urban migrants
+    3.1 For Male rural-to-urban migrants
 
 ```{r,  message=FALSE, echo=FALSE}
 
@@ -443,7 +444,7 @@ ggplot(CORMentalHealth, aes(x = MentalHealth, y = COR, fill = MentalHealth)) + g
 ```
 
 
-3.2 For Female rural-to-urban migrants
+    3.2 For Female rural-to-urban migrants
 
 ```{r,  message=FALSE, echo=FALSE}
 
