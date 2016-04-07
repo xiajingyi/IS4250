@@ -305,6 +305,7 @@ qplot(GenderX, ScoreX, data=healthDataTbl, geom=c("jitter"),
    fill=GenderX, main="Lifestyle Score - Gender",
    xlab="", ylab="Lifestyle Score", color = 'red')
 
+qplot(GenderX, data=healthDataTbl, geom="bar", fill=ScoreX, xlab="", ylab="Lifestyle Score")
 
 densityplot(~healthDataTbl$Score|healthDataTbl$GenderX, 
   	main="Lifestyle Score - Gender",
@@ -340,11 +341,6 @@ summary(test1)
 ci1 <- confint(test1)
 
 exp(cbind(COR = coef(test1), ci1))
-
-plot(effect("OCCUPATION1", test1))
-plot(effect("WORKPLACESCALE1", test1))
-plot(effect("DAILYWORKINGHOURS1", test1))
-plot(effect("MENTALHEALTH1", test1))
 
 ```
 
@@ -410,12 +406,6 @@ ci2 <- confint(test2)
 
 exp(cbind(COR = coef(test2), ci2))
 
-plot(effect("OCCUPATION2", test2))
-plot(effect("MARITALSTATUS2", test2))
-plot(effect("SALARY2", test2))
-plot(effect("NUMBEROFCITIESRESIDEDIN2", test2))
-plot(effect("DAILYWORKINGHOURS2", test2))
-plot(effect("MENTALHEALTH2", test2))
 ```
 
 
