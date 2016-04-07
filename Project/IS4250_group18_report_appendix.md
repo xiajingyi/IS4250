@@ -355,7 +355,7 @@
     ## data:  LifestyleScoreX
     ## X-squared = 513.27, df = 2, p-value < 2.2e-16
 
-![](project_code_files/figure-markdown_strict/unnamed-chunk-28-1.png)<!-- -->![](project_code_files/figure-markdown_strict/unnamed-chunk-28-2.png)<!-- -->
+![](IS4250_group18_report_appendix_files/figure-markdown_strict/unnamed-chunk-28-1.png)<!-- -->![](IS4250_group18_report_appendix_files/figure-markdown_strict/unnamed-chunk-28-2.png)<!-- -->
 
 ##### Section 3 - Association between lifestyle Score and socio-demographic characteristics and phiscal and mental status (By Gender)
 
@@ -457,13 +457,13 @@
 
 ###### Male - significant risk factor COR visualization
 
-![](project_code_files/figure-markdown_strict/unnamed-chunk-30-1.png)<!-- -->
+![](IS4250_group18_report_appendix_files/figure-markdown_strict/unnamed-chunk-30-1.png)<!-- -->
 
-![](project_code_files/figure-markdown_strict/unnamed-chunk-31-1.png)<!-- -->
+![](IS4250_group18_report_appendix_files/figure-markdown_strict/unnamed-chunk-31-1.png)<!-- -->
 
-![](project_code_files/figure-markdown_strict/unnamed-chunk-32-1.png)<!-- -->
+![](IS4250_group18_report_appendix_files/figure-markdown_strict/unnamed-chunk-32-1.png)<!-- -->
 
-![](project_code_files/figure-markdown_strict/unnamed-chunk-33-1.png)<!-- -->
+![](IS4250_group18_report_appendix_files/figure-markdown_strict/unnamed-chunk-33-1.png)<!-- -->
 
     3.2 For Female rural-to-urban migrants
 
@@ -563,14 +563,14 @@
 
 ###### Female - significant risk factor COR visualization
 
-![](project_code_files/figure-markdown_strict/unnamed-chunk-35-1.png)<!-- -->
+![](IS4250_group18_report_appendix_files/figure-markdown_strict/unnamed-chunk-35-1.png)<!-- -->
 
-![](project_code_files/figure-markdown_strict/unnamed-chunk-36-1.png)<!-- -->
+![](IS4250_group18_report_appendix_files/figure-markdown_strict/unnamed-chunk-36-1.png)<!-- -->
 
-![](project_code_files/figure-markdown_strict/unnamed-chunk-37-1.png)<!-- -->
+![](IS4250_group18_report_appendix_files/figure-markdown_strict/unnamed-chunk-37-1.png)<!-- -->
 
-![](project_code_files/figure-markdown_strict/unnamed-chunk-38-1.png)<!-- -->
+![](IS4250_group18_report_appendix_files/figure-markdown_strict/unnamed-chunk-38-1.png)<!-- -->
 
-![](project_code_files/figure-markdown_strict/unnamed-chunk-39-1.png)<!-- -->
+![](IS4250_group18_report_appendix_files/figure-markdown_strict/unnamed-chunk-39-1.png)<!-- -->
 
-![](project_code_files/figure-markdown_strict/unnamed-chunk-40-1.png)<!-- -->
+![](IS4250_group18_report_appendix_files/figure-markdown_strict/unnamed-chunk-40-1.png)<!-- -->
