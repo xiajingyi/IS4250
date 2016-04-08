@@ -549,42 +549,6 @@
     ## 
     ## Number of Fisher Scoring iterations: 2
 
-    ##                                      COR     2.5 %    97.5 %
-    ## (Intercept)                    3.6456074 2.8779112 4.6180902
-    ## AGE2>32                        1.0150284 0.9581486 1.0752849
-    ## OCCUPATION2Construction        0.9787387 0.8481963 1.1293723
-    ## OCCUPATION2Hospitality         1.1584592 1.0563645 1.2704211
-    ## OCCUPATION2DomesticSservices   1.1146430 1.0323409 1.2035065
-    ## OCCUPATION2SmallBusiness       1.1034555 1.0139224 1.2008948
-    ## OCCUPATION2Recreation/Leisures 1.6781331 1.5343948 1.8353364
-    ## WORKPLACESCALE2Moderate        1.0107243 0.9432791 1.0829919
-    ## WORKPLACESCALE2Small           1.0526665 0.9840847 1.1260279
-    ## EDUCATIONATTAINMENT2JuniorHigh 1.0406707 0.9165488 1.1816016
-    ## EDUCATIONATTAINMENT2HighSchool 1.0205431 0.9020460 1.1546064
-    ## EDUCATIONATTAINMENT2College    1.0183759 0.8924082 1.1621245
-    ## MARITALSTATUS2Single           1.2135993 1.0983154 1.3409839
-    ## MARITALSTATUS2Cohabitating     1.1061900 0.9112421 1.3428443
-    ## MARITALSTATUS2Divorced/Widowed 1.1118359 0.8363149 1.4781265
-    ## ACCOMPANYCHILD2Cohabitate      0.9878195 0.8952573 1.0899520
-    ## ACCOMPANYCHILD2ResideElsewhere 0.9655407 0.8773913 1.0625463
-    ## SALARY21500-2500RMB            0.9193689 0.8521751 0.9918609
-    ## SALARY22500-3500RMB            0.9299730 0.8530831 1.0137930
-    ## SALARY2>=3500RMB               1.1547884 1.0313961 1.2929429
-    ## NUMBEROFCITIESRESIDEDIN2>=3    1.0890634 1.0235987 1.1587150
-    ## DAILYWORKINGHOURS2<8           1.0464129 0.8929556 1.2262423
-    ## DAILYWORKINGHOURS28-11         1.0785105 1.0127431 1.1485488
-    ## DAILYWORKINGHOURS2>=11         1.0507422 0.9829170 1.1232476
-    ## WEEKLYWORKINGDAYS25            0.9679142 0.8418567 1.1128473
-    ## WEEKLYWORKINGDAYS26            1.0046257 0.8790917 1.1480859
-    ## WEEKLYWORKINGDAYS27            1.0433837 0.9131537 1.1921865
-    ## RESIDENCE2Rent(with others)    1.0730011 0.9778398 1.1774232
-    ## RESIDENCE2Rent(family)         0.9874437 0.9194093 1.0605125
-    ## RESIDENCE2Rent(alone)          1.1025700 1.0084241 1.2055053
-    ## RESIDENCE2OwnLivingPlace       0.8914418 0.7809681 1.0175428
-    ## BMI2NormalWeight               1.0547857 0.9691929 1.1479374
-    ## BMI2Overweight                 1.0335682 0.9356281 1.1417604
-    ## MENTALHEALTH2Abnormal          1.3779398 1.2785766 1.4850249
-
 -   3.2.2 For Female rural-to-urban migrants (Only 4 significant
     independent variables (5% significance level) are used in the
     logistic regression model)
@@ -593,51 +557,62 @@
 
     ## 
     ## Call:
-    ## glm(formula = ScoreX ~ OCCUPATION1 + WORKPLACESCALE1 + DAILYWORKINGHOURS1 + 
-    ##     MENTALHEALTH1, data = Male)
+    ## glm(formula = ScoreX ~ OCCUPATION2 + MARITALSTATUS2 + SALARY2 + 
+    ##     NUMBEROFCITIESRESIDEDIN2 + DAILYWORKINGHOURS2 + MENTALHEALTH2, 
+    ##     data = Female)
     ## 
     ## Deviance Residuals: 
-    ##      Min        1Q    Median        3Q       Max  
-    ## -1.46151  -0.34635   0.08104   0.17163   1.22839  
+    ##     Min       1Q   Median       3Q      Max  
+    ## -1.5727  -0.4732  -0.2671   0.5141   1.7329  
     ## 
     ## Coefficients:
     ##                                Estimate Std. Error t value Pr(>|t|)    
-    ## (Intercept)                     1.84107    0.02624  70.153  < 2e-16 ***
-    ## OCCUPATION1Construction         0.06123    0.03448   1.776 0.075896 .  
-    ## OCCUPATION1Hospitality          0.18906    0.05901   3.204 0.001372 ** 
-    ## OCCUPATION1DomesticSservices   -0.05676    0.05794  -0.980 0.327284    
-    ## OCCUPATION1SmallBusiness        0.06123    0.04808   1.273 0.203018    
-    ## OCCUPATION1Recreation/Leisures  0.37062    0.05210   7.113 1.43e-12 ***
-    ## WORKPLACESCALE1Moderate        -0.01269    0.03148  -0.403 0.686744    
-    ## WORKPLACESCALE1Small            0.11243    0.03536   3.179 0.001492 ** 
-    ## DAILYWORKINGHOURS1<8           -0.02754    0.15480  -0.178 0.858829    
-    ## DAILYWORKINGHOURS18-11          0.02224    0.02879   0.772 0.439925    
-    ## DAILYWORKINGHOURS1>=11          0.13740    0.03614   3.801 0.000147 ***
-    ## MENTALHEALTH1Abnormal           0.37791    0.03959   9.545  < 2e-16 ***
+    ## (Intercept)                     1.34070    0.03957  33.884  < 2e-16 ***
+    ## OCCUPATION2Construction        -0.00888    0.06721  -0.132 0.894905    
+    ## OCCUPATION2Hospitality          0.17127    0.04435   3.862 0.000115 ***
+    ## OCCUPATION2DomesticSservices    0.14341    0.03586   3.999 6.52e-05 ***
+    ## OCCUPATION2SmallBusiness        0.13067    0.03729   3.505 0.000465 ***
+    ## OCCUPATION2Recreation/Leisures  0.56922    0.04093  13.907  < 2e-16 ***
+    ## MARITALSTATUS2Single            0.22566    0.03074   7.340 2.83e-13 ***
+    ## MARITALSTATUS2Cohabitating      0.14767    0.09303   1.587 0.112571    
+    ## MARITALSTATUS2Divorced/Widowed  0.12666    0.14461   0.876 0.381165    
+    ## SALARY21500-2500RMB            -0.07364    0.03820  -1.927 0.054031 .  
+    ## SALARY22500-3500RMB            -0.06479    0.04292  -1.510 0.131281    
+    ## SALARY2>=3500RMB                0.15020    0.05579   2.692 0.007139 ** 
+    ## NUMBEROFCITIESRESIDEDIN2>=3     0.08220    0.03143   2.615 0.008968 ** 
+    ## DAILYWORKINGHOURS2<8            0.07469    0.08009   0.933 0.351107    
+    ## DAILYWORKINGHOURS28-11          0.09773    0.03044   3.211 0.001339 ** 
+    ## DAILYWORKINGHOURS2>=11          0.06661    0.03059   2.177 0.029532 *  
+    ## MENTALHEALTH2Abnormal           0.32200    0.03810   8.451  < 2e-16 ***
     ## ---
     ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
     ## 
-    ## (Dispersion parameter for gaussian family taken to be 0.4193105)
+    ## (Dispersion parameter for gaussian family taken to be 0.3690315)
     ## 
-    ##     Null deviance: 1266.9  on 2810  degrees of freedom
-    ## Residual deviance: 1173.6  on 2799  degrees of freedom
-    ## AIC: 5548.1
+    ##     Null deviance: 1220.97  on 2672  degrees of freedom
+    ## Residual deviance:  980.15  on 2656  degrees of freedom
+    ## AIC: 4939.9
     ## 
     ## Number of Fisher Scoring iterations: 2
 
     ##                                      COR     2.5 %   97.5 %
-    ## (Intercept)                    6.3032581 5.9872399 6.635956
-    ## OCCUPATION1Construction        1.0631474 0.9936648 1.137489
-    ## OCCUPATION1Hospitality         1.2081163 1.0761608 1.356252
-    ## OCCUPATION1DomesticSservices   0.9448161 0.8433954 1.058433
-    ## OCCUPATION1SmallBusiness       1.0631395 0.9675210 1.168208
-    ## OCCUPATION1Recreation/Leisures 1.4486360 1.3080062 1.604386
-    ## WORKPLACESCALE1Moderate        0.9873853 0.9283122 1.050217
-    ## WORKPLACESCALE1Small           1.1189892 1.0440630 1.199292
-    ## DAILYWORKINGHOURS1<8           0.9728401 0.7182534 1.317666
-    ## DAILYWORKINGHOURS18-11         1.0224851 0.9663920 1.081834
-    ## DAILYWORKINGHOURS1>=11         1.1472823 1.0688223 1.231502
-    ## MENTALHEALTH1Abnormal          1.4592257 1.3502784 1.576964
+    ## (Intercept)                    3.8217307 3.5365553 4.129902
+    ## OCCUPATION2Construction        0.9911594 0.8688213 1.130724
+    ## OCCUPATION2Hospitality         1.1868136 1.0880065 1.294594
+    ## OCCUPATION2DomesticSservices   1.1542077 1.0758718 1.238247
+    ## OCCUPATION2SmallBusiness       1.1395947 1.0592826 1.225996
+    ## OCCUPATION2Recreation/Leisures 1.7668876 1.6306798 1.914473
+    ## MARITALSTATUS2Single           1.2531444 1.1798628 1.330978
+    ## MARITALSTATUS2Cohabitating     1.1591268 0.9659214 1.390977
+    ## MARITALSTATUS2Divorced/Widowed 1.1350338 0.8549043 1.506954
+    ## SALARY21500-2500RMB            0.9290095 0.8619871 1.001243
+    ## SALARY22500-3500RMB            0.9372682 0.8616527 1.019519
+    ## SALARY2>=3500RMB               1.1620696 1.0417058 1.296341
+    ## NUMBEROFCITIESRESIDEDIN2>=3    1.0856702 1.0208079 1.154654
+    ## DAILYWORKINGHOURS2<8           1.0775489 0.9210168 1.260685
+    ## DAILYWORKINGHOURS28-11         1.1026676 1.0388085 1.170452
+    ## DAILYWORKINGHOURS2>=11         1.0688807 1.0066763 1.134929
+    ## MENTALHEALTH2Abnormal          1.3798815 1.2805854 1.486877
 
 ###### Female - significant risk factor COR visualization
 
