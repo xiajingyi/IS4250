@@ -549,7 +549,7 @@
     ## 
     ## Number of Fisher Scoring iterations: 2
 
--   3.2.2 For Female rural-to-urban migrants (Only 4 significant
+-   3.2.2 For Female rural-to-urban migrants (Only 6 significant
     independent variables (5% significance level) are used in the
     logistic regression model)
 
